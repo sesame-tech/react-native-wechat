@@ -1,0 +1,36 @@
+{
+  "name": "react-native-wechat",
+  "title": "React Native Wechat",
+  "version": "1.0.0",
+  "description": "wechat sdk wrapper for react native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sesame-tech/react-native-wechat.git",
+    "baseUrl": "https://github.com/sesame-tech/react-native-wechat.git"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": {
+    "name": "yyc",
+    "email": "yuanyinchun3@163.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react": "^16.5.0",
+    "react-native": ">=0.57.0-rc.0 <1.0.x"
+  },
+  "devDependencies": {
+    "react": "^16.5.0",
+    "react-native": "^0.59.4"
+  },
+  "dependencies": {
+    "events": "^3.0.0"
+  }
+}
