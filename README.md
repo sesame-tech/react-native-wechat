@@ -1,6 +1,6 @@
-# react-native-wechat
+# @sesame/react-native-wechat
 
-WeChat SDK wrapper for react native 0.60+
+WeChat SDK wrapper for react native 0.60+, support iOS and android
 
 # Why
 [yorkie's react-native-wechat](https://github.com/yorkie/react-native-wechat) was unmaintaned for a long time,
@@ -13,6 +13,7 @@ This repo is ported and modified from yorkie's work.
 
 - [Installation](#installation)
 - [API Documentation](#api-documentation)
+- [TODO](#todo)
 - [License](#license)
 
 
@@ -349,6 +350,10 @@ Sends request for proceeding payment, then returns an object:
 | errCode | Number | 0 if authorization successed        |
 | errStr  | String | Error message if any error occurred |
 
+## Todo
+
+- [ ] test each api
+- [ ] add api usage in example project
 
 ## License
 
