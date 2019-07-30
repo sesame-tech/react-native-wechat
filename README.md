@@ -19,13 +19,13 @@ This repo is ported and modified from yorkie's work.
 
 ## Installation
 
-#####install package 
+#### install package 
 ```sh
 $ yarn add @sesame/react-native-wechat --save
 $ cd ios && pod install && cd ..
 ```
 
-#####configure ios project
+#### configure iOS project
     
 reference: [wechat sdk ios integrate guide](https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=1417694084&token=&lang=zh_CN)
 
@@ -33,7 +33,7 @@ reference: [wechat sdk ios integrate guide](https://open.weixin.qq.com/cgi-bin/s
 wechat app id.
 ![ios configure](./image/iosConfigure.png)
 
-#####configure android project
+#### configure android project
 
 reference: [wechat sdk android integrate guide](https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=1417751808&token=&lang=zh_CN)
 
