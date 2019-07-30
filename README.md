@@ -69,6 +69,16 @@ reference: [wechat sdk android integrate guide](https://open.weixin.qq.com/cgi-b
     }
     ```
 - android/app/src/main/AndroidManifest.xml
+  
+  add permission info:
+  ```
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <!-- for mta statistics, not necessary-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  ```
 
   add activey info:
   
