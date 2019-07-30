@@ -1,6 +1,6 @@
 # react-native-wechat
 
-WeChat SDK wrapper for react native
+WeChat SDK wrapper for react native 0.60+
 
 # Why
 [yorkie's react-native-wechat](https://github.com/yorkie/react-native-wechat) was unmaintaned for a long time,
@@ -89,7 +89,7 @@ reference: [wechat sdk android integrate guide](https://open.weixin.qq.com/cgi-b
 [react-native-wechat] uses Promises, therefore you can use `Promise`
 or `async/await` to manage your dataflow.
 
-#### registerApp(appid)
+#### registerApp(appid)  
 
 - `appid` {String} the appid you get from WeChat dashboard
 - returns {Boolean} explains if your application is registered done
