@@ -1,4 +1,4 @@
-package com.reactlibrary;
+package cn.net.sesame.wechat;
 
 import java.util.Arrays;
 import java.util.Collections;

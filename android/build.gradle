@@ -51,6 +51,7 @@ repositories {
 
 dependencies {
     implementation "com.facebook.react:react-native:${safeExtGet('reactnativeVersion', '+')}"
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
 }
 
 def configureReactNativePom(def pom) {
@@ -60,7 +61,7 @@ def configureReactNativePom(def pom) {
         name packageJson.title
         artifactId packageJson.name
         version = packageJson.version
-        group = "com.reactlibrary"
+        group = "cn.net.sesame.wechat"
         description packageJson.description
         url packageJson.repository.baseUrl
 

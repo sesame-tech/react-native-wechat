@@ -63,11 +63,6 @@ RCT_EXPORT_METHOD(isWXAppInstalled:(RCTResponseSenderBlock)callback)
     callback(@[[NSNull null], @([WXApi isWXAppInstalled])]);
 }
 
-RCT_EXPORT_METHOD(isWXAppSupportApi:(RCTResponseSenderBlock)callback)
-{
-    callback(@[[NSNull null], @([WXApi isWXAppSupportApi])]);
-}
-
 RCT_EXPORT_METHOD(getWXAppInstallUrl:(RCTResponseSenderBlock)callback)
 {
     callback(@[[NSNull null], [WXApi getWXAppInstallUrl]]);

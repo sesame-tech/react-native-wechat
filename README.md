@@ -21,17 +21,68 @@ This repo is ported and modified from yorkie's work.
 #####install package 
 ```sh
 $ yarn add @sesame/react-native-wechat --save
+$ cd ios && pod install && cd ..
 ```
 
 #####configure ios project
+    
+reference: [wechat sdk ios integrate guide](https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=1417694084&token=&lang=zh_CN)
 
-Open your app xcode project, TARGETS->Info->URL Types->URL Schemas, input your
+- Open your app xcode project, TARGETS->Info->URL Types->URL Schemas, input your
 wechat app id.
 ![ios configure](./image/iosConfigure.png)
 
 #####configure android project
-todo
 
+reference: [wechat sdk android integrate guide](https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=1417751808&token=&lang=zh_CN)
+
+- android/app/proguard-rules.pro
+   
+   copy following content to proguard file:
+   ```
+    -keep class com.tencent.mm.opensdk.** {
+        *;
+    }
+    
+    -keep class com.tencent.wxop.** {
+        *;
+    }
+    ```
+- android/app/src/main/java/YOUR/PACKAGE/PATH
+
+    create file **wxapi/WXEntryActivity.java**
+    ```
+    package YOUR.PACKAGE.PATH.wxapi;
+    
+    import android.app.Activity;
+    import android.os.Bundle;
+    import cn.net.sesame.wechat.RNWechatModule;
+    
+    public class WXEntryActivity extends Activity {
+      @Override
+      protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        RNWechatModule.handleIntent(getIntent());
+        finish();
+      }
+    }
+    ```
+- android/app/src/main/AndroidManifest.xml
+
+  add activey info:
+  
+  ```
+    <activity
+        android:name=".wxapi.WXEntryActivity"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar"
+        android:exported="true"
+        android:taskAffinity="YOUR.PACKAGE.PATH"
+        android:launchMode="singleTask">
+      </activity>  
+  ```
+           
+    
 
 ## API Documentation
 
@@ -57,11 +108,6 @@ WeChat.registerApp('appid');
 
 Check if the WeChat app is installed on the device.
 
-#### isWXAppSupportApi()
-
-- returns {Boolean} Contains the result.
-
-Check if wechat support open url.
 
 #### getApiVersion()
 

@@ -103,13 +103,6 @@ export const registerApp = wrapRegisterApp(WeChat.registerApp);
 export const isWXAppInstalled = wrapApi(WeChat.isWXAppInstalled);
 
 /**
- * Return if the wechat application supports the api
- * @method isWXAppSupportApi
- * @return {Promise}
- */
-export const isWXAppSupportApi = wrapApi(WeChat.isWXAppSupportApi);
-
-/**
  * Get the wechat app installed url
  * @method getWXAppInstallUrl
  * @return {String} the wechat app installed url
